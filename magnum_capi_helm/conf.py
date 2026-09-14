@@ -199,6 +199,21 @@ capi_helm_cluster_labels_opts = [
         help="Enable the Kubernetes Dashboard addon.",
     ),
     cfg.BoolOpt(
+        "nvidia_gpu_operator_enabled",
+        default=True,
+        help=(
+            "Enable the NVIDIA GPU operator addon on the cluster. "
+        ),
+    ),
+    cfg.BoolOpt(
+        "mellanox_network_operator_enabled",
+        default=True,
+        help=(
+            "Enable the Mellanox network operator addon on the "
+            "cluster. "
+        ),
+    ),
+    cfg.BoolOpt(
         "auto_healing_enabled",
         default=True,
         help="Enable auto-healing for cluster nodes.",
