@@ -199,6 +199,11 @@ capi_helm_cluster_labels_opts = [
         help="Enable the Kubernetes Dashboard addon.",
     ),
     cfg.BoolOpt(
+        "headlamp_enabled",
+        default=False,
+        help="Enable the Headlamp addon.",
+    ),
+    cfg.BoolOpt(
         "nvidia_gpu_operator_enabled",
         default=True,
         help=(
