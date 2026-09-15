@@ -719,7 +719,14 @@ class Driver(driver.Driver):
             "kube_dashboard_enabled",
             CONF.capi_helm_cluster_labels.kube_dashboard_enabled,
         )
-
+        
+    def _get_headlamp_enabled(self, cluster):
+        return self._get_label_bool(
+            cluster,
+            "headlamp_enabled",
+            CONF.capi_helm_cluster_labels.headlamp_enabled,
+    )
+    
     def _get_nvidia_gpu_operator_enabled(self, cluster):
         return self._get_label_bool(
             cluster,
