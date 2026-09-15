@@ -1250,6 +1250,9 @@ class Driver(driver.Driver):
                 "kubernetesDashboard": {
                     "enabled": self._get_kube_dash_enabled(cluster)
                 },
+                "headlamp": {
+                    "enabled": self._get_headlamp_enabled(cluster)
+                },
                 "nvidiaGPUOperator": {
                     "enabled": self._get_nvidia_gpu_operator_enabled(
                         cluster
